@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
+  <title>Memory Game</title>
+
+  <link rel="stylesheet" href="assets/css/output.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+</head>
+
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+  <h1 class="text-3xl font-bold mb-4">Memory Game</h1>
+
+  <div class="flex space-x-8 mb-4">
+    <div class="text-lg font-semibold text-gray-700">Player 1: <span id="player1Score">0</span></div>
+    <div class="text-lg font-semibold text-gray-700">Player 2: <span id="player2Score">0</span></div>
+  </div>
+
+  <p id="turnInfo" class="text-xl font-medium mb-4">Turn: Player 1</p>
+
+  <div id="gameBoard"
+    class="grid grid-cols-4 gap-4 p-4 bg-white rounded-lg shadow-md w-full max-w-lg md:grid-cols-4 sm:grid-cols-3">
+  </div>
+
+  <p id="winnerMessage" class="text-2xl font-bold text-green-600 mt-6"></p>
+
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
