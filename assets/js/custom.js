@@ -8,7 +8,7 @@ let cards = [
     '🍎', '🍎', '🍌', '🍌', '🍒', '🍒', '🍇', '🍇',
     '🍉', '🍉', '🍓', '🍓', '🍍', '🍍', '🥝', '🥝'
 ];
-let playerTurn = 1;
+let playerTurn = 'Jubair';
 let player1Score = 0;
 let player2Score = 0;
 let flippedCards = [];
@@ -68,7 +68,7 @@ function checkMatch() {
 }
 
 function updateScore() {
-    if (playerTurn === 1) {
+    if (playerTurn === 'Jubair') {
         player1Score++;
         player1ScoreEl.innerText = player1Score;
     } else {
@@ -78,15 +78,15 @@ function updateScore() {
 }
 
 function switchTurn() {
-    playerTurn = playerTurn === 1 ? 2 : 1;
-    turnInfoEl.innerText = `Turn: Player ${playerTurn}`;
+    playerTurn = playerTurn === 'Jubair' ? 'Sumayta' : 'Jubair';
+    turnInfoEl.innerText = `Turn: ${playerTurn}`;
 }
 
 function endGame() {
     if (player1Score > player2Score) {
-        winnerMessageEl.innerText = 'Player 1 Wins!';
+        winnerMessageEl.innerText = 'Jubair Wins!';
     } else if (player2Score > player1Score) {
-        winnerMessageEl.innerText = 'Player 2 Wins!';
+        winnerMessageEl.innerText = 'Sumayta Wins!';
     } else {
         winnerMessageEl.innerText = "It's a tie!";
     }
